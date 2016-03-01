@@ -1,0 +1,637 @@
+<html>
+<head>
+<script type="text/javascript">
+ 
+    function show() { document.getElementById('csn').style.display = 'block';document.getElementById('step3').style.display = 'none'; }
+function hide() { document.getElementById('csn').style.display = 'none';document.getElementById('step3').style.display = 'block'; }
+
+function hide1() {  document.getElementById('step3').style.display = 'none';
+					document.getElementById('step2').style.display = 'none';
+ }
+
+
+
+
+
+
+  </script>
+<style>
+
+
+
+
+
+
+.pure-form-stacked input[type="text"],
+.pure-form-stacked input[type="password"],
+.pure-form-stacked input[type="email"],
+.pure-form-stacked input[type="url"],
+.pure-form-stacked input[type="date"],
+.pure-form-stacked input[type="month"],
+.pure-form-stacked input[type="time"],
+.pure-form-stacked input[type="datetime"],
+.pure-form-stacked input[type="datetime-local"],
+.pure-form-stacked input[type="week"],
+.pure-form-stacked input[type="number"],
+.pure-form-stacked input[type="search"],
+.pure-form-stacked input[type="tel"],
+.pure-form-stacked input[type="color"],
+.pure-form-stacked input[type="file"],
+.pure-form-stacked select,
+.pure-form-stacked label,
+.pure-form-stacked textarea {
+    display: block;
+    margin: 0.25em 0;
+}
+
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+.pure-form-stacked input:not([type]) {
+    display: block;
+    margin: 0.25em 0;
+}
+.pure-form-aligned input,
+.pure-form-aligned textarea,
+.pure-form-aligned select,
+/* NOTE: pure-help-inline is deprecated. Use .pure-form-message-inline instead. */
+.pure-form-aligned .pure-help-inline,
+.pure-form-message-inline {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: middle;
+}
+.pure-form-aligned textarea {
+    vertical-align: top;
+}
+
+/* Aligned Forms */
+.pure-form-aligned .pure-control-group {
+    margin-bottom: 0.5em;
+}
+.pure-form-aligned .pure-control-group label {
+    text-align: right;
+    display: inline-block;
+    vertical-align: middle;
+    width: 10em;
+    margin: 0 1em 0 0;
+}
+.pure-form-aligned .pure-controls {
+    margin: 1.5em 0 0 11em;
+}
+
+.pure-button {
+    font-family: inherit;
+    font-size: 100%;
+    padding: 0.5em 1em;
+    color: #fff; /* rgba not supported (IE 8) */
+    color: fff; /* rgba supported */
+    border: 1px solid #999;  /*IE 6/7/8*/
+    border: none rgba(0, 0, 0, 0);  /*IE9 + everything else*/
+    background-color: rgb(99, 145, 205);
+    text-decoration: none;
+    border-radius: 2px;
+	width:300px;
+}
+
+
+
+
+
+
+
+
+.col1
+{
+    float: left;
+    width: 25%;
+	
+}
+.col1a
+{
+    float: left;
+    width: 99%;
+	
+}
+.col2
+{
+    float: left;
+    width: 5%;
+	
+}
+.col3
+{
+    float: left;
+    width: 40%;
+	
+}
+.col3a
+{
+    float: left;
+    width: 30%;
+	
+}
+.col4
+{
+    float: left;
+    width: 15%;
+	
+}
+.col4a
+{
+    float: left;
+    width: 20%;
+	
+}
+.col5
+{
+    float: left;
+    width: 15%;
+	
+}
+.col6
+{
+    float: left;
+    width: 60%;
+	
+}
+.col6a
+{
+    float: left;
+    width: 70%;
+	
+}
+
+.colh
+{
+    float: left;
+    width: 50%;
+	
+}
+.colm
+{
+    float: left;
+    width: 33%;
+	
+}
+
+.last{
+    clear: left;
+}
+
+.row{
+    border: 1px solid green;
+}
+</style>
+</head>
+<body>
+<div class="col6a">
+<img src="usda-logo.png" width="100" style="float:left;"/><h2 style="color:#6391CD;">&nbsp;2015-2016 Prototype Application for Free and Reduced Price School Meals</h2>
+<p style="margin-top:-15px">&nbsp;Complete one application per household.</p>
+</div><br><br><br>
+<div class="col3a" ><h3 style="float:right !important">Apply online at <a href="#">www.abcdefgh.edu</a></h3></div>
+
+<form class="pure-form pure-form-stacked" action="review.php" id=form1 method=post name=form1>
+    <fieldset style="border:solid 1px #FF8B00 !important;">
+	<br>
+        <legend style="color:#FF8B00;"><img src="step1.png" width="65" style="float:left; margin-top:-25px"/><b> List All Household Members who are infants, children, and students up to and including grade 12</b></legend>
+<p style="font-size:12px !important;">Definition of Household Member : " Anyone who is living with you and shares income and expenses even if not related."<br>
+Children in Foster care and children who meat the defination of Homeless, Migrant of Runaway are eligible for free meals. Read how to apply for Free and Reduced Price School Meals for more information.
+     </p>   <div class="pure-g">
+            <div class="col1">
+                <label for="first-name"><b>Child's First Name*</b></label>
+                <input id="first-name" name="fname1" class="pure-u-23-24" type="text" required size="40">
+				<input id="first-name" name="fname2"class="pure-u-23-24" type="text"  size="40">
+				<input id="first-name" name="fname3"class="pure-u-23-24" type="text" size="40">
+				<input id="first-name" name="fname4"class="pure-u-23-24" type="text"  size="40">
+            </div>
+
+            <div class="col2">
+                <label for="last-name"><b>MI</b></label>
+                <input id="text" name="mi1" class="pure-u-23-24" type="text" size="1">
+				<input id="text" name="mi2"class="pure-u-23-24" type="text" size="1">
+				<input id="text"name="mi3" class="pure-u-23-24" type="text" size="1">
+				<input id="text" name="mi4"class="pure-u-23-24" type="text" size="1">
+            </div>
+
+            <div class="col3">
+                <label for="email"><b>Child's Last Name*</b></label>
+                <input id="text" name="lname1"class="pure-u-23-24" type="text" required size="65">
+				<input id="text" name="lname2"class="pure-u-23-24" type="text"  size="65">
+				<input id="text" name="lname3"class="pure-u-23-24" type="text"  size="65">
+				<input id="text" name="lname4"class="pure-u-23-24" type="text"  size="65">
+            </div>
+
+            <div class="col4">
+                <label for="city"style="font-size:12px !important;margin-top:12px"><b>Student </b></label>
+				<div class="colh"><input id="terms" name="chk1" type="radio" style="height:15px !important;">Yes</div><div class="colh"><input id="terms" name="chk1" type="radio" style="height:15px !important">No</div>
+				<div class="colh"><input id="terms" name="chk2" type="radio" style="height:15px !important;">Yes</div><div class="colh"><input id="terms" name="chk2" type="radio" style="height:15px !important;">No</div>
+				<div class="colh"><input id="terms" name="chk3" type="radio" style="height:15px !important;">Yes</div><div class="colh"><input id="terms" name="chk3" type="radio" style="height:15px !important;">No</div>
+				<div class="colh"><input id="terms" name="chk4" type="radio" style="height:15px !important;">Yes</div><div class="colh"><input id="terms" name="chk4" type="radio" style="height:15px !important;">No</div>
+                 
+            </div>
+			<div class="col5">
+			<div class="colh">
+                <label for="city" style="font-size:12px !important;margin-top:12px"><b>Foster Child</b></label>
+				<input id="chk5" name="chk5" type="checkbox" style="height:18px !important" onclick="hide1();"><br>
+				<input id="terms" name="chk6" type="checkbox" style="height:18px !important"><br>
+				<input id="terms" name="chk7" type="checkbox" style="height:18px !important"><br>
+				<input id="terms" name="chk8" type="checkbox" style="height:18px !important"></div>
+				<div class="colh">
+				<label for="city" style="font-size:12px !important;margin-top:-18px"><b>Homeless &nbsp;&nbsp;&nbsp;Runaway &nbsp; Migrant</b></label>
+				<input id="terms" name="chk9" type="checkbox"style="height:18px !important"><br>
+				<input id="terms" name="chk10" type="checkbox" style="height:18px !important"><br>
+				<input id="terms" name="chk11" type="checkbox" style="height:18px !important"><br>
+				<input id="terms" name="chk12" type="checkbox" style="height:18px !important"></div>
+                 
+            </div>
+			</div>
+			<br>
+			
+			
+			
+			
+			
+			
+			</fieldset>
+			<br>
+			<br>
+			
+			
+			
+			
+	  <fieldset id="step2" style="border:solid 1px #AD0C04 !important;">
+	  <br>
+        <legend style="color:#AD0C04;"><img src="step2.png" width="65" style="float:left; margin-top:-25px"/><b> Do any Household Members (including you) currently participate in one or more of the following assitance programs: SNAP, TANF, of FDPIR &nbsp; <input id="terms" name="st" type="radio" onclick="show();">Yes &nbsp;&nbsp;<input id="terms" name="st"type="radio"onclick="hide();">No</b> </legend>
+
+		<div class="pure-g">
+            <div class="col1"style="font-size:12px !important;">
+                <b>If you answered NO > </b>Complete STEP 3.
+				
+            </div>
+
+           
+
+            <div class="col3" style="font-size:12px !important;">
+               <b> If you answered Yes > </b>Write a case number here then to to STEP 4 (Do not complete STEP 3)
+                
+				
+            </div>
+			<div class="col1"><b>Case Number :</b>
+<input id="csn" class="pure-u-23-24" name="csn" type="text" required size="30" placeholder="write only one case number in this space"></div> 
+           
+			</div> 
+			
+			
+			
+			
+			
+			</fieldset>		
+			
+			<br>
+			<br>
+			
+		
+			
+			
+			
+	 <fieldset id="step3" style="border:solid 1px #00A5B8 !important;">
+	 <br>
+        <legend style="color:#00A5B8;"><img src="step3.png" width="65" style="float:left; margin-top:-25px"/><b>  Report Income for All Household Members (Skip this step if you answered 'Yes' to STEP 2)</b> </legend>
+
+		<div class="pure-g">
+		<p style="font-size:12px !important;">Please read How to Apply for Free and Reduced Price School Meals for more information. The Sources of
+		Income for Children section will help you with the Child Income question. The Sources of income for
+		Adults. section will help you with the All Adult Household Members section.</p>
+            <div class="col6">
+                <b>A. Child Income </b><br>
+				Sometimes children in the household earn income. Please include the TOTAL income earned by all Household Members
+				listed in STEP 1 here.
+				
+            </div>
+      
+            <div class="col5">
+                <label for="last-name"><b>Child Income                 $*</b></label>
+                <input id="ci" name="ci" class="pure-u-23-24" type="number" size="10">
+                
+				
+            </div>
+			<div class="col1">
+ <label for="last-name"><b>How often*</b></label>
+ <div class="col1a" style="border: solid 1px #ccc">
+ <div class="col1"><div class="colh"><input id="terms" name="ch1" type="radio">Weekly</div>
+ </div>
+ <div class="col1"><div class="colh"><input id="terms" name="ch1" type="radio">BiWeekly</div>
+ </div>
+ <div class="col1"><div class="colh"><input id="terms" name="ch1" type="radio">2xMonth</div>
+ </div>
+ <div class="col1"><div class="colh"><input id="terms" name="ch1" type="radio">Monthly</div>
+ </div>
+ </div>
+           
+			</div>
+			<br>
+			<b>B. All Adult Household Members(including yourself) </b><br>
+			List all Household Members not listed in STEP 1 (including yourself) eve if they do not receive income.
+			For each Household Member listed. if they do receive income, report total income for each source in whole dollars
+			only, if they do not receive income from any source write '0' if you enter '0' or leave any fields blank, you are
+			certifying (promising) that there is no income to report.
+			<br><br>
+			<div class="col1" style="font-size:12px !important;"><br><br>
+			<label for="first-name"><b>Name of Adult Household Members(First and Last)*</b></label>
+                <input id="hm1" name="hm1" class="pure-u-23-24" type="text" size="40">
+				<input id="hm2" name="hm2"  class="pure-u-23-24" type="text" size="40">
+				<input id="hm3" name="hm3"  class="pure-u-23-24" type="text" size="40">
+				<input id="hm4" name="hm4"  class="pure-u-23-24" type="text" size="40">
+			</div>
+			
+			
+			<div class="col1">
+				   <div class="col3" style="font-size:12px !important;"><br><br>
+                <label for="last-name"><b>Earning from work</b></label>
+                <input id="last-name" class="pure-u-23-24" type="text" size="10">
+                <input id="last-name" class="pure-u-23-24" type="text" size="10">
+				<input id="last-name" class="pure-u-23-24" type="text" size="10">
+				<input id="last-name" class="pure-u-23-24" type="text" size="10">
+				
+            </div>
+			<div class="col6" style="font-size:12px !important;">
+ <label for="last-name" style="margin-top:12px !important"><b>How often</b></label>
+ <div class="col1"><label for="last-name">Weekly</label><div class="colh"><input id="terms" name="w1" type="radio"style="height:22px !important"><br>
+ <input id="terms" name="bw1" type="radio" style="height:22px !important">
+ <input id="terms" name="mm1" type="radio" style="height:22px !important">
+ <input id="terms" name="m1" type="radio" style="height:22px !important">
+ 
+ </div>
+ </div>
+ <div class="col1"><label for="last-name">BiWeekly</label><div class="colh"><input id="terms" name="w1" type="radio" style="height:22px !important">
+ <input id="terms" name="bw1" type="radio" style="height:22px !important">
+ <input id="terms" name="mm1" type="radio" style="height:22px !important">
+ <input id="terms" name="m1" type="radio" style="height:22px !important">
+ 
+ </div>
+ </div>
+ <div class="col1"><label for="last-name">2x Month</label><div class="colh"><input id="terms" name="w1" type="radio" style="height:22px !important">
+ <input id="terms" name="bw1" type="radio" style="height:22px !important">
+ <input id="terms" name="mm1" type="radio" style="height:22px !important">
+ <input id="terms" name="m1" type="radio" style="height:22px !important">
+ 
+ 
+ </div>
+ </div>
+ <div class="col1"><label for="last-name">Monthly</label><div class="colh"><input id="terms" name="w1" type="radio" style="height:22px !important">
+ <input id="terms" name="bw1" type="radio" style="height:22px !important">
+ <input id="terms" name="mm1" type="radio" style="height:22px !important">
+ <input id="terms" name="m1" type="radio" style="height:22px !important">
+ 
+ 
+ </div>
+ </div>
+           
+			</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			</div>
+			
+			
+			
+			
+		<div class="col1">
+				   <div class="col3" style="font-size:12px !important;"><br>
+                <label for="last-name"><b>Public Assistance Child Support Alimony</b></label>
+                <input id="last-name" class="pure-u-23-24" type="text" size="10">
+                <input id="last-name" class="pure-u-23-24" type="text" size="10">
+				<input id="last-name" class="pure-u-23-24" type="text" size="10">
+				<input id="last-name" class="pure-u-23-24" type="text" size="10">
+				
+            </div>
+			<div class="col6" style="font-size:12px !important;">
+ <label for="last-name" style="margin-top:12px !important"><b>How often</b></label>
+ <div class="col1"><label for="last-name">Weekly</label><div class="colh"><input id="terms" name="w2" type="radio"style="height:22px !important"><br>
+ <input id="terms" name="bw2" type="radio" style="height:22px !important">
+ <input id="terms" name="mm2" type="radio" style="height:22px !important">
+ <input id="terms" name="m2" type="radio" style="height:22px !important">
+ 
+ </div>
+ </div>
+ <div class="col1"><label for="last-name">BiWeekly</label><div class="colh"><input id="terms" name="w2" type="radio" style="height:22px !important">
+ <input id="terms" name="bw2" type="radio" style="height:22px !important">
+ <input id="terms" name="mm2" type="radio" style="height:22px !important">
+ <input id="terms" name="m2" type="radio" style="height:22px !important">
+ 
+ </div>
+ </div>
+ <div class="col1"><label for="last-name">2x Month</label><div class="colh"><input id="terms" name="w2" type="radio" style="height:22px !important">
+ <input id="terms" name="bw2" type="radio" style="height:22px !important">
+ <input id="terms" name="mm2" type="radio" style="height:22px !important">
+ <input id="terms" name="m2" type="radio" style="height:22px !important">
+ 
+ 
+ </div>
+ </div>
+ <div class="col1"><label for="last-name">Monthly</label><div class="colh"><input id="terms" name="w2" type="radio" style="height:22px !important">
+ <input id="terms" name="bw2" type="radio" style="height:22px !important">
+ <input id="terms" name="mm2" type="radio" style="height:22px !important">
+ <input id="terms" name="m2" type="radio" style="height:22px !important">
+ 
+ 
+ </div>
+ </div>
+           
+			</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			</div>
+
+
+
+<div class="col1" >
+				   <div class="col3" style="font-size:12px !important;"><br>
+                <label for="last-name"><b>Pensions/Retirement/ All other income</b></label>
+                <input id="last-name" class="pure-u-23-24" type="text" size="10">
+                <input id="last-name" class="pure-u-23-24" type="text" size="10">
+				<input id="last-name" class="pure-u-23-24" type="text" size="10">
+				<input id="last-name" class="pure-u-23-24" type="text" size="10">
+				
+            </div>
+			<div class="col6" style="font-size:12px !important;">
+ <label for="last-name" style="margin-top:12px !important"><b>How often</b></label>
+ <div class="col1"><label for="last-name">Weekly</label><div class="colh"><input id="terms" name="w3" type="radio"style="height:22px !important"><br>
+ <input id="terms" name="bw3" type="radio" style="height:22px !important">
+ <input id="terms" name="mm3" type="radio" style="height:22px !important">
+ <input id="terms" name="m3" type="radio" style="height:22px !important">
+ 
+ </div>
+ </div>
+ <div class="col1"><label for="last-name">BiWeekly</label><div class="colh"><input id="terms" name="w3" type="radio" style="height:22px !important">
+ <input id="terms" name="bw3" type="radio" style="height:22px !important">
+ <input id="terms" name="mm3" type="radio" style="height:22px !important">
+ <input id="terms" name="m3" type="radio" style="height:22px !important">
+ 
+ </div>
+ </div>
+ <div class="col1"><label for="last-name">2x Month</label><div class="colh"><input id="terms" name="w3" type="radio" style="height:22px !important">
+ <input id="terms" name="bw3" type="radio" style="height:22px !important">
+ <input id="terms" name="mm3" type="radio" style="height:22px !important">
+ <input id="terms" name="m3" type="radio" style="height:22px !important">
+ 
+ 
+ </div>
+ </div>
+ <div class="col1"><label for="last-name">Monthly</label><div class="colh"><input id="terms" name="w3" type="radio" style="height:22px !important">
+ <input id="terms" name="bw3" type="radio" style="height:22px !important">
+ <input id="terms" name="mm3" type="radio" style="height:22px !important">
+ <input id="terms" name="m3" type="radio" style="height:22px !important">
+ 
+ 
+ </div>
+ </div>
+           
+			</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			</div>			
+			
+			
+			
+	<div class="col1" style="font-size:12px !important;"><b>Total Household Members (Children and Adults)</b>	<input id="last-name" class="pure-u-23-24" type="text" size="4"></div>
+	<div class="col1" style="font-size:12px !important;"><b> Last Four Digits of Social Security Number (SSN) of Primary Wage Earner or Other Adult Household Member</b>	</div>		
+	<div class="col1" style="font-size:12px !important;"><div class="col4a"><input id="last-name" class="pure-u-23-24" type="text" size="4"></div><div class="col6"><b>Check if no SSN</b> <input id="terms" name="dw3" type="checkbox" >	</div>	</div>		
+	<div class="col1" style="font-size:12px !important;">	</div>		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			</fieldset>			
+			<br>
+			<br>
+			
+	<fieldset style="border:solid 1px #A20091 !important;">
+	<br>
+	
+        <legend style="color:#A20091;"><img src="step4.png" width="65" style="float:left; margin-top:-25px"/><b> Contant information and adult signature</b>  </legend>
+
+		<div class="pure-g">
+            
+			<div class="colm">
+                <label for="first-name"><b>Street Address*</b> ( if available) </label>
+                <input id="street" name="street" class="pure-u-23-24" type="text"required  size="50">
+				
+			</div>
+			<div class="colm">
+			<div class="colh">
+                <label for="city"><b>City* </b></label>
+                <input id="city" name="city" class="pure-u-23-24" type="text" required size="25">
+			</div>
+			<div class="col1">
+                <label for="state"><b>State*</b> </label>
+                <input id="state" name="state" class="pure-u-23-24" type="text" required size="10">
+			</div>
+			<div class="col1">
+                <label for="zip"><b>Zip*</b></label>
+                <input id="zip" name="zip" class="pure-u-23-24" type="text" required size="10">
+			</div>
+			</div>
+			<div class="colm">
+                <label for="dpe"><b>Daytime Phone and Email  ( Optional)</b></label>
+                <input id="dpe" name="dpe" class="pure-u-23-24" type="text" size="50">
+				
+			</div>
+			<div class="colm">
+                <label for="pnf"><b>Printed Name of adult completing form </b></label>
+                <input id="pnf" name="pnf"class="pure-u-23-24" type="text" size="50">
+				
+			</div>
+			<div class="colm">
+                <label for="saf"><b>Signature of adult completing form*</b> </label>
+                <input id="saf" name="saf" class="pure-u-23-24" type="text" required size="50">
+				
+			</div>
+			
+			<div class="colm">
+                <label for="date"><b>Today's Date</b> </label>
+                <input id="date" name="date" class="pure-u-23-24" type="text" size="50">
+				
+			</div>
+			
+			
+			
+			
+           
+			</div>
+			<br>
+			
+			
+			
+			
+			
+			
+			</fieldset>			
+			
+			
+			<br>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+
+           <!-- <div class="col">
+                <label for="state">State</label>
+                <select id="state" class="pure-input-1-2">
+                    <option>AL</option>
+                    <option>CA</option>
+                    <option>IL</option>
+                </select>
+            </div> 
+        
+
+        <label for="terms" class="pure-checkbox">
+            <input id="terms" type="checkbox"> I've read the terms and conditions
+        </label>-->
+<fieldset style="border:solid 1px #6391CD !important;">
+<label for="cb" class="pure-checkbox">
+                <input id="cb" type="checkbox" required> I've read the <a href="tc.html">terms and conditions</a>
+            </label>
+       <center> <button type="submit" class="pure-button pure-button-primary">Submit</button> </center>
+   </fieldset> 
+</form>
+</body>
+</html>
